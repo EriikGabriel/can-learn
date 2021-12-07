@@ -7,7 +7,9 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="styles/global.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>CanLearn? - Plataforma de Educação</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body>
     <div id="landing">
@@ -28,17 +30,17 @@
               <button>Ajuda</button>
             </li>
           </ul>
-          <button>Entrar</button>
-          <button>Cadastrar</button>
+          <button class="login-buttons">Entrar</button>
+          <button class="login-buttons">Cadastrar</button>
         </div>
       </header>
       <div>
-        <div>
+        <div class="landing-section">
           <h1><span>Educação</span> não tem distância!</h1>
           <p>Tenha acesso à conteúdo educacional de qualidade independente de onde esteja! Tudo de forma gratuita!</p>
-          <button>Acessar</button>
+          <button class="login-buttons" name="access-button">Acessar</button>
         </div>
-        <div>
+        <div class="landing-illustration">
           <img src="./assets/images/learn_illustration.svg" alt="Ilustração de pessoa estudando online" />
         </div>
       </div>
@@ -99,12 +101,12 @@
           <div class="join-card">
             <div class="mask-card"></div>
             <h3>Para Professores</h3>
-            <button>Quero Ensinar</button>
+            <button class="join-buttons">Quero Ensinar</button>
           </div>
           <div class="join-card">
             <div class="mask-card"></div>
             <h3>Para Estudantes</h3>
-            <button>Quero Aprender</button>
+            <button class="join-buttons">Quero Aprender</button>
           </div>
         </div>
       </section>
@@ -146,7 +148,7 @@
         <p>Entre em contato com a gente</p>
         <form>
           <input type="email" placeholder="Seu email" autocomplete="off" />
-          <button type="submit">Enviar</button>
+          <button type="submit" id="contact-button">Enviar</button>
         </form>
       </div>
       <div id="links">
@@ -156,5 +158,7 @@
       </div>
       <p>&copy; 2021 CanLearn Inc.</p>
     </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
