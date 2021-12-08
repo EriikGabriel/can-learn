@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 80px;
+  min-height: 80px;
   margin-bottom: 100px;
 }
 
@@ -27,16 +27,22 @@ header > img {
   height: 50px;
 }
 
-header div,
-header ul {
+header div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
 }
 
-header ul {
+header nav {
   margin-right: 50px;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 header button {
@@ -74,15 +80,18 @@ header div > button:last-child:hover {
 
 #landing > div {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 100%;
+}
+
+#landing > div > div {
+  width: 25%;
 }
 
 #landing > div > div h1 {
   color: var(--primary-color);
   font-weight: bolder;
-  width: 50%;
   margin-bottom: 10px;
 }
 
@@ -91,7 +100,6 @@ header div > button:last-child:hover {
 }
 
 #landing > div > div p {
-  width: 50%;
   margin-bottom: 20px;
 }
 
@@ -112,14 +120,17 @@ header div > button:last-child:hover {
   transition: 1s;
 }
 
+#landing > div > div:last-child {
+  /* background-color: cadetblue; */
+}
+
 #landing > div > div:last-child img {
   height: 100%;
-  width: 25em;
+  width: 100%;
 }
 
 main {
   margin-top: 50px;
-  min-height: 2150px;
 }
 
 main > section h2 {
@@ -196,8 +207,8 @@ main #services-section .service-card {
 main #services-section .service-card img {
   position: absolute;
   top: -3em;
-  width: 8em;
-  height: 8em;
+  width: 30%;
+  height: 30%;
 }
 
 main #services-section .service-card h3 {
@@ -300,6 +311,7 @@ main #join-section .join-card:last-child {
 
 main #interface-section {
   margin-top: 150px;
+  margin-bottom: 200px;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -308,7 +320,7 @@ main #interface-section {
 
 main #interface-section > img {
   height: 80%;
-  width: 40rem;
+  width: 40%;
 }
 
 main #interface-section > div {
@@ -344,7 +356,6 @@ main #interface-section > div .interface-item div {
 
 main #interface-section > div .interface-item p {
   width: 65%;
-  text-align: justify;
 }
 
 main #interface-section > div .interface-item img {
@@ -353,7 +364,8 @@ main #interface-section > div .interface-item img {
 }
 
 footer {
-  height: 350px;
+  height: 100%;
+  padding: 20px;
   background-color: #252641;
   display: flex;
   justify-content: center;
@@ -384,7 +396,7 @@ footer > div:first-child p {
 }
 
 footer > div:first-child div {
-  height: 80%;
+  height: 3rem;
   background-color: #626381;
   width: 1px;
   margin: 0 2em 0px 0px;
@@ -434,6 +446,11 @@ footer #contact-us form button[type="submit"] {
 
 footer #links {
   margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 footer #links a:not(:last-child)::after {
@@ -462,8 +479,308 @@ footer > p:last-child {
   background: var(--primary-color);
 }
 
-@media screen and (max-width: 850px) {
+/* Responsive Breakpoints */
+
+/*? 1000px ?*/
+@media screen and (max-width: 62.5em) {
+  #landing > div > div {
+    width: 40%;
+  }
+
+  main #services-section > div:first-child {
+    width: 50%;
+  }
+
+  main #services-section .service-card {
+    height: 300px;
+    width: 30%;
+  }
+
+  main #services-section .service-card img {
+    height: 35%;
+    width: 35%;
+  }
+
+  main #services-section .service-card h3 {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  main #services-section .service-card p {
+    font-size: 0.8em;
+  }
+
+  main #join-section .join-card,
+  main #join-section .mask-card {
+    width: 45vw;
+  }
+
+  main #interface-section > div {
+    width: 50%;
+  }
+
+  main #interface-section > div h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/*? ±850px ?*/
+@media screen and (max-width: 53em) {
   header > img {
     display: none;
+  }
+
+  ul > li {
+    width: 100%;
+  }
+
+  main #services-section .service-card {
+    height: 300px;
+  }
+
+  main #services-section .service-card img {
+    height: 35%;
+    width: 35%;
+  }
+
+  main #services-section .service-card h3 {
+    font-size: 0.9rem;
+    width: 80%;
+  }
+
+  main #services-section .service-card p {
+    font-size: 0.7em;
+  }
+
+  main #join-section > div:first-child {
+    width: 70%;
+  }
+
+  main #interface-section > img {
+    display: none;
+  }
+
+  main #interface-section > div {
+    width: 90%;
+  }
+
+  main #interface-section > div h2 {
+    font-size: 1.2rem;
+  }
+}
+
+/*? ±705px ?*/
+@media screen and (max-width: 44em) {
+  header > div {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  header > div nav {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    width: 100vw;
+  }
+
+  #landing {
+    border-bottom-left-radius: 15%;
+    border-bottom-right-radius: 15%;
+  }
+
+  #landing > div > div {
+    width: 80%;
+    text-align: center;
+  }
+
+  #landing > div > div:last-child {
+    display: none;
+  }
+
+  main #services-section > div:first-child {
+    width: 70%;
+  }
+
+  main #services-section > div:first-child h2 {
+    font-size: 1.4em;
+  }
+
+  main #services-section > div:last-child {
+    flex-wrap: wrap;
+  }
+
+  main #services-section .service-card {
+    height: 300px;
+    width: 40%;
+  }
+
+  main #services-section .service-card img {
+    height: 35%;
+    width: 35%;
+  }
+
+  main #services-section .service-card h3 {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  main #services-section .service-card p {
+    font-size: 0.8em;
+  }
+
+  main #services-section .service-card:last-child {
+    height: 300px;
+    width: 80%;
+  }
+
+  main #services-section .service-card:last-child p {
+    font-size: 0.9em;
+    width: 100%;
+  }
+
+  main #join-section > div:last-child {
+    flex-direction: column;
+    gap: 0;
+  }
+  main #join-section .join-card,
+  main #join-section .mask-card {
+    width: 80vw;
+  }
+}
+
+/*? ±560px ?*/
+@media screen and (max-width: 35em) {
+  main #services-section > div:last-child {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  main #services-section .service-card {
+    height: 230px;
+    width: 80%;
+  }
+
+  main #services-section .service-card img {
+    height: 45%;
+    width: 45%;
+  }
+
+  main #services-section .service-card h3 {
+    font-size: 1rem;
+    width: 80%;
+  }
+
+  main #services-section .service-card p {
+    font-size: 0.9em;
+    width: 100%;
+  }
+
+  main #services-section .service-card:last-child {
+    height: 230px;
+    width: 80%;
+  }
+
+  main #services-section .service-card:last-child p {
+    font-size: 0.9em;
+    width: 100%;
+  }
+
+  main #join-section > div:first-child {
+    width: 80%;
+  }
+
+  footer #contact-us form {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  footer #contact-us form {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  footer #contact-us form button[type="submit"] {
+    width: 100%;
+  }
+}
+
+/*? ±450px ?*/
+@media screen and (max-width: 28em) {
+  header > div nav {
+    flex-direction: column;
+    gap: 0;
+    width: 100vw;
+  }
+
+  header > div nav button {
+    width: 100%;
+  }
+
+  #landing > div > div h1 {
+    font-size: 1.6em;
+  }
+
+  main #quantity-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 200px;
+  }
+
+  main #services-section > div:first-child {
+    width: 90%;
+  }
+
+  main #services-section .service-card {
+    height: 230px;
+    width: 90%;
+  }
+
+  main #services-section .service-card img {
+    height: 40%;
+    width: 40%;
+  }
+
+  main #services-section .service-card h3 {
+    font-size: 1rem;
+    width: 90%;
+  }
+
+  main #services-section .service-card p {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  main #services-section .service-card:last-child {
+    height: 230px;
+    width: 90%;
+  }
+
+  main #services-section .service-card:last-child p {
+    font-size: 0.8em;
+    width: 100%;
+  }
+
+  main #join-section > div:first-child {
+    width: 90%;
+  }
+
+  main #join-section > div:first-child p {
+    font-size: 0.9em;
+  }
+
+  main #interface-section {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  main #interface-section > div h2 {
+    font-size: 1.2rem;
   }
 }
